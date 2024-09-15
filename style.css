@@ -1,0 +1,353 @@
+:root {
+  --primary-dark-magenta: hsl(300, 43%, 22%);
+  --primary-soft-pink: hsl(333, 80%, 67%);
+  --neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --neutral-light-grayish-magenta: hsl(300, 24%, 96%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--neutral-white);
+  line-height: 150%;
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url('/13. social_proof_section_master/assets/bg-pattern-top-desktop.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -870px 0%;
+}
+
+body::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-image: url('/13. social_proof_section_master/assets/bg-pattern-bottom-desktop.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 100px;
+}
+
+
+p,
+h1 {
+  margin: 0;
+}
+
+main {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+main .main-ro1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.main-ro1 .col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 370px;
+}
+
+.main-ro1 .col1 h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: .8;
+  letter-spacing: -2px;
+  color: var(--primary-dark-magenta);
+}
+
+.main-ro1 .col1 p {
+  font-weight: 400;
+}
+
+
+.main-ro1 .col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 480px;
+}
+
+.main-ro1 .col2 .ro1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-ro1 .col2 .ro2 {
+  display: flex;
+  justify-content: center;
+}
+
+.main-ro1 .col2 .ro3 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.main-ro1 .col2 .rates .rates-container {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 20px;
+  padding: 15px 28px;
+  width: 100%;
+  max-width: 390px;
+  font-weight: 700;
+  background-color: var(--neutral-light-grayish-magenta);
+  border-radius: 10px;
+  color: var(--primary-dark-magenta);
+}
+
+.main-ro1 .col2 .stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.main-ro2 {
+  color: var(--neutral-light-grayish-magenta);
+  display: inline-flex;
+  height: 275px;
+  gap: 26px;
+}
+
+.main-ro2 .card-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.main-ro2 .card-container .card {
+  background-color: var(--primary-dark-magenta);
+  width: 100%;
+  max-width: 305px;
+  padding: 28px 24px;
+  border-radius: 8px;
+}
+
+.main-ro2 .card-container .card .profile {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.main-ro2 .card-container .card .description {
+  margin-bottom: 10px;
+}
+
+.main-ro2 .card-container .card .profile .profilepic {
+  display: block;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.main-ro2 .card-container .card span {
+  display: block;
+}
+
+.main-ro2 .card-container .card span.name {
+  font-weight: 500;
+}
+
+.main-ro2 .card-container .card span.status {
+  font-weight: 500;
+  color: var(--primary-soft-pink);
+}
+
+.main-ro2 .col1 {
+  align-items: flex-start;
+}
+
+.main-ro2 .col2 {
+  justify-content: center;
+}
+
+.main-ro2 .col3 {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .main-ro2 .card-container .card {
+    padding: 20px;
+  }
+
+  .main-ro2 .col1 {
+    justify-content: center;
+  }
+
+  .main-ro2 .col2 {
+    justify-content: center;
+  }
+
+  .main-ro2 .col3 {
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    border: 1px solid red;
+    height: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('/13. social_proof_section_master/assets/bg-pattern-top-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -1310px;
+  }
+
+
+  body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: url('/13. social_proof_section_master/assets/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  main {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  main .main-ro1 {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .main-ro1 .col2 {
+    margin-top: 36px;
+    gap: 16px;
+  }
+
+  .main-ro1 .col2 .rates .rates-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-ro2 {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+
+  .main-ro2 .card-container .card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    border: 1px solid red;
+    height: 100%;
+    padding: 36px 44px;
+    overflow: auto;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('/13. social_proof_section_master/assets/bg-pattern-top-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -1310px;
+  }
+
+
+  body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: url('/13. social_proof_section_master/assets/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  main {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  main .main-ro1 {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .main-ro1 .col2 {
+    margin-top: 36px;
+    gap: 16px;
+  }
+
+  .main-ro1 .col2 .rates .rates-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-ro2 {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+
+  .main-ro2 .card-container .card {
+    max-width: 100%;
+  }
+}
